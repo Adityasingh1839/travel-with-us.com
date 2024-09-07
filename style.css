@@ -1,0 +1,859 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images/banner.jpeg);
+    background-size: center;
+    background-position: center;
+}
+  
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+.sub-header-1{
+    display: none;
+}
+.logo{
+    width: 140px;
+    cursor: pointer;
+}
+.nav-links li{
+list-style: none;
+display: inline-block;
+margin: 10px 30px;
+}
+.nav-links li a{
+text-decoration: none;
+color: #fff;
+}
+/* Basic button styles */
+.register-btn {
+    display: inline-flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f76a7a; /* Default button color */
+    border: 2px solid transparent; /* Border to hold the glow */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Glowing effect on click */
+.register-btn:active {
+    background-color: #ff0000; /* Red color on click */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Red glow effect */
+    border-color: #ff0000; /* Red border on click */
+}
+
+/* Optional: Additional hover effect */
+.register-btn:hover {
+    background-color: #ed1017; /* Darker blue on hover */
+    border-color: #f60a12;
+}
+
+.container{
+    padding: 0 7%;
+}
+.header h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: #f6f5f5;
+    text-align: center;
+    padding-top: 22%;
+}
+.search-bar{
+    background: #fff;
+    width: 100%;
+    margin: 100px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+}
+.search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-bar form input{
+    display: block;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.search-bar form button{
+background: #ff5361;
+width: 55px;
+height: 55px;
+border-radius: 50%;
+border: 0;
+outline: none;
+cursor: pointer;    
+}
+.Location-input{
+    flex: 1;
+} 
+.search-bar form label{
+    font-weight: 600;
+}
+
+/*---------exclusives------------- */
+
+.exclusives-wrapper {
+    overflow: hidden; /* Hide overflow to only show images within the wrapper */
+    position: relative;
+    width: 100%; /* Full width of the container */
+}
+
+.exclusives-container {
+    display: flex;
+    width: auto; /* Width will be controlled by the content */
+    animation: scroll-left 20s linear infinite; /* Adjust the duration for scrolling speed */
+}
+
+.exclusives-item {
+    flex: 0 0 auto; /* Prevent items from shrinking or growing */
+    width: 200px; /* Set a fixed width for each item */
+    margin-right: 20px; /* create a gap between items*/
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.exclusives-item img {
+    width: 100%; /* Make images fill the container */
+    height: 150px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure images cover the box without distortion */
+}
+
+.exclusives-item span {
+    display: block;
+    text-align: center;
+    padding-top: 5px; /* Space between image and text */
+}
+
+/* Keyframes for horizontal scrolling animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ---------------Trending Places-------------- */
+/* Container for scrolling */
+.trending {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.trending-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trending-inner {
+    display: flex;
+    width: 200%; /* Twice the width of the container to allow looping */
+    animation: scroll 30s linear infinite;
+}
+
+.trending-item {
+    flex: 0 0 auto;
+    width: 200px; /* Set a fixed width for each item */
+    margin-right: 20px; /* Space between items */
+    box-sizing: border-box;
+}
+
+.trending-item img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for each image */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.trending-item h3 {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move by half the width of the inner container */
+    }
+}
+
+/* ---------call to action---------*/
+.cta{
+    margin: 80px 0;
+    background-image: linear-gradient(to right, #3f2321, transparent),url(images/banner.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: #fff;
+}
+.cta h3{
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+.cta p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.cta-btn{
+    background: #ff5361;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: inline-block;
+}
+/* ----------Travellers stories--------*/
+.stories-container {
+    display: flex;
+    gap: 20px; /* Adjust space between items as needed */
+}
+
+.story-item {
+    flex: 0 0 auto;
+    position: relative;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.story-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Define the blinking animation */
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.stories-container .story-item {
+    animation: blink 6s infinite;
+}
+
+.stories-container .story-item:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stories-container .story-item:nth-child(2) {
+    animation-delay: 2s; /* Start after the first item */
+}
+
+.stories-container .story-item:nth-child(3) {
+    animation-delay: 4s; /* Start after the second item */
+}
+
+.stories p{
+    position: relative;
+    text-align: center;
+}
+.stories p{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 26px;
+
+}
+.start-btn{
+    text-decoration: none;
+    background: #ff5361;
+    color: #fff;
+    width: 80%;
+    max-width: 350px;
+    display: block;
+    text-align: center;
+    margin: 60px auto;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+
+}
+
+/*---------about-msg--------*/
+.about-msg{
+    text-align: center;
+    margin: 80px 0;
+    color: #333;
+    font-size: 17px;
+}
+.about-msg h2{
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;  
+}
+/* -------footer-------*/
+.footer{
+    margin: 80px 0 10px;
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    margin: 0 10px; 
+}
+.footer hr{
+    background: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 20px 0;
+}
+.footer p{
+    padding-bottom: 15px;
+}
+
+.active{
+    position: relative;
+}
+.active::after{
+    content: '';
+    background: #fff;
+    width: 25px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+nav .fa-bars{
+    display: none;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.scroll-top-btn.show {
+    opacity: 1;
+}
+
+.scroll-top-btn:hover {
+    background-color: #555;
+}
+/*-------for small screen devices--*/
+@media only screen and (max-width: 700px){
+
+.logo{
+    position: fixed;
+    top: 2%;
+    left: 3%;
+}
+nav{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    background: #000;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max--height 0.5s;
+}
+nav .nav-links li{
+margin: 10px 0;
+display: block;
+}
+.register-btn{
+    margin: 15px 0 30px;
+    display: inline-block;
+}
+nav .fa-bars{
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: #fff;
+    font-size: 28px;
+}
+.active::after{
+   
+    left: -40px;
+    transform: translateX(0, 50%);
+    bottom: 50%;
+    border-radius: 2px;
+}
+.hidemenu{
+    max-height: 300px;
+}
+.header{
+    padding-top: 200px;
+    font-size: 7vw;
+}
+.search-bar{
+   width: 90%;
+   margin: 30px auto;
+   padding: 20px 10px 30px;
+   border-radius: 5px; 
+}
+.search-bar form{
+    display: block;
+}
+.search-bar form input{
+    border-bottom: 1px solid #ddd;
+    width: 10%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.search-bar form button{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+.sub-title{
+    font-size: 6vw;
+}
+.cta{
+    padding: 15% 5%;
+}
+.cta h3{
+    font-size: 7vw;
+    line-height: 8vw;
+}
+.cta p{
+    font-size: 14px;
+}
+.cta-btn{
+    padding: 6px 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.stories p{
+    font-size: 22px;
+}
+.about-msg{
+    font-size: 15px;
+}
+}
+/*-------- listing page --------*/
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar-white {
+    background-color: rgb(26, 21, 21);
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+.register-btn {
+    margin-left: auto;
+    background-color: #ed7392;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+.fas.fa-bars {
+    display: none;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 20px; /* Adds spacing between columns */
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+}
+
+.left-col {
+    flex: 2; /* Takes up more space */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-col {
+    flex: 1; /* Takes up less space */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Hills {
+    background: #fff;
+    display: flex; /* creates a flex container, making the 'hills-img' and '.hill-info' align side by side*/
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px; /*add spcing between the image and the information */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Hills-img img {
+    width: 4in; /*set width to 4 inches */
+    height: 4in; /* set width to 4 inches */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;/* optional: adds rounded corner*/
+}
+
+.Hills-info {
+    flex: 1; /* Allows the info section to take up the remaining space */
+}
+
+.rating i {
+    color: #f39c12;
+}
+.Hills-price {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+.beatches {
+    background: #fff;
+    display: flex; /* creates a flex container, making the 'hills-img' and '.hill-info' align side by side*/
+    padding: 20px;
+    border-radius: 8px;
+    gap: 20px; /*add spcing between the image and the information */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.beatches-img img {
+    width: 4in; /*set width to 4 inches */
+    height: 4in; /* set width to 4 inches */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;/* optional: adds rounded corner*/
+}
+.beatches-info {
+    flex: 1; /* Allows the info section to take up the remaining space */
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+.promo {
+    background-color: #e0ffe0;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    background-color: #f0f8ff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
+/*-------- about us page --------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .column {
+    float: left;
+    width: 20%;
+    margin: 80px;
+    padding: 0 8px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+  }
+  
+  .about-section {
+    padding: 100px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .title {
+    color: grey;
+  }
+  
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+ /*-------- tutla page --------*/
+body, h1, h2, p, ul, li, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+}
+
+header {
+    background: #004d00; /* Dark green background */
+    color: #fafbfa;
+    padding: 1em 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    
+  
+    
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f9f6f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background: url('images/tutla6.jpg') no-repeat center center/cover;
+    color: #fff; /* White text in hero section */
+    text-align: center;
+    padding: 5em 0;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+button {
+    background-color: #006400; /* Darker green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #004d00; /* Even darker green */
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+#gallery {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem; /* Space between images */
+    white-space: nowrap;
+    transition: transform 0.5s ease;
+}
+
+.gallery img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+footer {
+    background: #004d00; /* Dark green background */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/*------ for goa page ---------*/
+.hero {
+    background-image: url("images/image1.png"); /* Replace with Goa-related image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-top: 60px; /* Adjust for fixed navbar */
+}
